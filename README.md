@@ -1,24 +1,33 @@
 # GitOps Demo
 
-[![Build Status]()
-[![App Status]()
+(WIP) ![Build Status]()
+(WIP) ![Code Coverage]()
+(WIP) ![App Status]()
 
-* A Golang project for GitOps pipeline demo
+A Golang project for GitOps pipeline demo
 
-## Build
+## Go
+
+- Install
+    - `brew install go`
+    - `go version`
+- Build
+    - `go build -o build/gitops-demo cmd/main.go`
+- Run
+    - `go run cmd/main.go`
+
+
+## Docker
 
 - Edit tags
     - edit file "Makefile" => `VERSION`
 - build and push image using makefile
     - build: `make docker-build`
     - push: `make docker-push`
-
-## Run
-
-- Docker
+- run docker container
     - run: `make docker-run`
 
-## Deploy
+## Deploy to Kubernetes
 
 - Edit tags
     - edit file "deploy/base/kustomization.yaml" => `images.newTag`
@@ -26,7 +35,7 @@
     - Build(preview): `kustomize build ./deploy/base`
     - Apply: `kubectl apply -k ./deploy/base`
 
-## 其他
+## Others
 
 - Network Test Container
     - `kubectl run net-test --image=justinhung0407/net-tools:v2.0.1 --restart=Never -n default sleep 3600`
