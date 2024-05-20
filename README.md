@@ -12,10 +12,11 @@ A Golang project for GitOps pipeline demo
     - `brew install go`
     - `go version`
 - Build
-    - `go build -o build/gitops-demo cmd/main.go`
+    - `go build -v -o build/cicdemo cmd/main.go`
 - Run
     - `go run cmd/main.go`
-
+- Test
+    - `go test -v ./...`
 
 ## Docker
 
@@ -50,6 +51,7 @@ A Golang project for GitOps pipeline demo
 - Update go dependencies
     - `go get -u ./cmd`
     - `go mod tidy`
+    - update go version in go.mod: `go mod tidy -go=1.22`
 
 - Delete single pod's container
     - `kubectl exec -it go-cicd-d64644988-bwtql -c opa-istio -n go-cicd -- /bin/sh -c "kill 1"`

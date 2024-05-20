@@ -1,7 +1,7 @@
 package main
 
 import (
-	cicdRouter "go-cicd/pkg/router"
+	cicdRouter "github.com/JustinHung0407/cicdemo/pkg/router"
 	"log"
 )
 

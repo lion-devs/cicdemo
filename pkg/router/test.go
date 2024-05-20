@@ -4,7 +4,7 @@
 package router
 
 import (
-	"go-cicd/pkg/model"
+	"github.com/JustinHung0407/cicdemo/pkg/model"
 	"net/http"
 
 	"github.com/gin-gonic/gin"

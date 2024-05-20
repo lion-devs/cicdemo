@@ -2,9 +2,9 @@ package main
 
 import (
 	"encoding/json"
+	"github.com/JustinHung0407/cicdemo/pkg/model"
+	cicdRouter "github.com/JustinHung0407/cicdemo/pkg/router"
 	"github.com/stretchr/testify/assert"
-	"go-cicd/pkg/model"
-	cicdRouter "go-cicd/pkg/router"
 	"net/http"
 	"net/http/httptest"
 	"testing"

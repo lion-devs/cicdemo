@@ -1,10 +1,11 @@
 package router
 
 import (
+	"github.com/JustinHung0407/cicdemo/pkg/metrics"
 	"github.com/gin-gonic/gin"
 	swaggerFiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
-	"go-cicd/pkg/metrics"
+
 	"log"
 )
 

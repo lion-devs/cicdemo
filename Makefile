@@ -1,7 +1,7 @@
 VERSION ?= v2.0.0
 PORT ?= 8085
 
-IMG ?= justinhung0407/gocicd:${VERSION}
+IMG ?= justinhung0407/cicdemo:${VERSION}
 
 .PHONY: help
 help: ## Display this help.
