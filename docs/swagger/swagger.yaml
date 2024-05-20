@@ -1,0 +1,46 @@
+definitions:
+  router.Response:
+    properties:
+      message:
+        type: string
+      status:
+        type: integer
+    type: object
+info:
+  contact: {}
+paths:
+  /:
+    get:
+      description: Returns the health status of the service.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/router.Response'
+        default:
+          description: ""
+          schema:
+            $ref: '#/definitions/router.Response'
+      summary: Checks the health status of the service.
+      tags:
+      - health
+  /alert_test:
+    get:
+      description: Returns the status of the alert service and OPA service.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/router.Response'
+        default:
+          description: ""
+          schema:
+            $ref: '#/definitions/router.Response'
+      summary: Test the alert service and OPA service.
+      tags:
+      - test
+swagger: "2.0"
